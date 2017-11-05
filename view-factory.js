@@ -6,11 +6,13 @@ class ViewFactory {
   }
 
   shared(view) {
+    const shared = this.app.make('config').get('view.shared')
+
     if (!view) {
-      return this.config.shared
+      return shared
     }
 
-    this.load(file, this.config.shared)
+    this.load(file, shared)
   }
 
   load(view, name) {
@@ -22,7 +24,7 @@ class ViewFactory {
 
     const context = this.getContext(name)
 
-    for (const key in context.keys) {
+    for (const key of context.keys()) {
       if (path === key.slice(2).split('.')[0]) {
         const component = context(key)
 

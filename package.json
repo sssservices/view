@@ -1,12 +1,12 @@
 {
 	"name": "@sssservices/view",
-	"version": "0.1.1",
+	"version": "0.1.4",
 	"description": "[READ ONLY] Subtree split of the Sssserve View component (see @sssserve/framework)",
 	"main": "view-factory.js",
 	"repository": "https://github.com/sssservices/view",
 	"author": "Wilson Lewis <wilsonlewis@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"@sssservices/support": "^0.1.1"
+		"@sssservices/support": "^0.1.4"
 	}
 }
